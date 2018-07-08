@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import FormTitle from '../formTitle';
+
 class SignIn extends Component {
   render() {
     return (
       <div className="sign-in">
-        <h1>Sign In</h1>
+        <FormTitle text="Sign In"/>
       </div>
     );
   }
