@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; // 10px
+}
+
+body {
+	font-family: $encode;
+	font-weight: 400;
+	color: $grey;
+}
