@@ -1,4 +1,7 @@
 header {
+	grid-column: content-start/content-end;
+	grid-row: header-start/header-end;
+
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: [title-start] 3rem [title-end subtitle-start] 2rem [subtitle-end];
