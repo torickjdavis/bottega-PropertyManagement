@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import FormTitle from '../formTitle';
+import SignInForm from './signinForm';
 
 class SignIn extends Component {
   render() {
     return (
       <div className="sign-in">
-        <FormTitle text="Sign In"/>
+        <SignInForm />
       </div>
     );
   }
