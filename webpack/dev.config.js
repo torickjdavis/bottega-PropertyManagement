@@ -30,30 +30,27 @@ module.exports = webpackMerge(webpackCommon, {
 
   module: {
 
-    rules: [
-      {
-        test: /\.s?css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              outputStyle: 'expanded',
-              sourceMap: true,
-              sourceMapContents: true
-            }
+    rules: [{
+      test: /\.s?css$/,
+      use: [{
+          loader: 'style-loader'
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2
           }
-        ]
-      }
-    ]
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            outputStyle: 'expanded',
+            sourceMap: true,
+            sourceMapContents: true
+          }
+        }
+      ]
+    }]
 
   },
 
@@ -88,7 +85,8 @@ module.exports = webpackMerge(webpackCommon, {
       warnings: true,
       errors: true
     },
-    proxy: proxyRules
+    proxy: proxyRules,
+    allowedHosts: env.devServer.allowedHosts || []
   }
 
 });
