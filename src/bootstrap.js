@@ -7,10 +7,10 @@ import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
 
-import Header from './components/header';
+import Layout from './components/layout';
 
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
@@ -20,10 +20,11 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
         <Switch>
-          <Header>
-          <Route path='/' component={SignIn}/>
+          <Layout>
+          <Route path='/' exact component={SignIn}/>
+          <Route path='/signin' component={SignIn}/>
           <Route path='/signup' component={SignUp}/>
-          </Header>
+          </Layout>
         </Switch>
       </BrowserRouter>
     </Provider>, document.querySelector('.app-wrapper'));
