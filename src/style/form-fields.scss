@@ -1,0 +1,39 @@
+.form-input {
+
+	display: grid;
+	grid-template-columns: 12.9rem 50rem;
+	grid-template-rows: 1fr;
+
+	align-items: center;
+
+	&-title {
+		grid-column: 1/2;
+		grid-row: 1;
+	}
+
+	input {
+		grid-column: 2/3;
+		grid-row: 1;
+	}
+}
+
+.form-input {
+	&-title {
+		color: $red;
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 2.3rem;
+	}
+
+	input {
+		height: 4rem;
+		width: 50rem;
+		border: 1px solid $bright-grey;
+		border-radius: 0.5rem;
+		padding-left: 2rem;
+		font-size: 1.6rem;
+		font-weight: 500;
+
+		font-family: inherit;
+	}
+}

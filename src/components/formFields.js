@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 
 export class FormInput extends Component {
 	render() {
-		const { className, title } = this.props;
+		const { className, title, input, type, placeholder } = this.props;
 		return (
-			<div classNam='form-input'>
-				<label>{title}</label>
-				<input className={`form-input ${className || ''}`}/>
+			<div className='form-input'>
+				<label className='form-input-title'>{title}</label>
+				<input
+					className={`form-input ${className || ''}`}
+					type={type}
+					placeholder={placeholder}
+					{...input}
+				/>
 			</div>
 		);
 	}
