@@ -1,4 +1,4 @@
-import axios from './axios';
+import axios from 'axios';
 
 import { ROOT_URL } from '../config';
 
@@ -7,7 +7,8 @@ export function signUp(fields, success) {
   return function(dipatch) {
     axios.post(`${ROOT_URL}/signUp`, fields) // may have to change
     .then(response => {
-      // do something with data
+      console.log(response);
+      success();
     })
     .catch(err => {
       if(err) {
