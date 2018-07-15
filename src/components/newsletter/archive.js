@@ -14,7 +14,10 @@ class Archive extends Component {
     return (
       <div className="archive">
         <h3 className="archive-title">Archive</h3>
-        <div className="items">
+        <div className="archive-items">
+          <ArchiveItem title='ItemTitle' date='ItemDate' />
+          <ArchiveItem title='ItemTitle' date='ItemDate' />
+          <ArchiveItem title='ItemTitle' date='ItemDate' />
           <ArchiveItem title='ItemTitle' date='ItemDate' />
         </div>
       </div>

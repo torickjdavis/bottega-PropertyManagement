@@ -1,4 +1,50 @@
 .archive {
   grid-column: aside-start/aside-end;
   grid-row: archive-start/archive-end;
+  
+  display: grid;
+  grid-template-rows: [title-start] 2.7rem [title-end items-start] 1fr [items-end];
+  
+  &-title {
+    grid-row: title-start/title-end;
+    color: $red;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+    
+    border-bottom: 0.1rem solid $bright-grey;
+    padding-bottom: 0.4rem;
+  }
+  
+  &-items {
+    grid-row: items-start/items-end;
+    
+    display: grid;
+    grid-row-gap: 1.6rem;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    
+    margin-top: 1.6rem;
+  }
+}
+
+.archiveItem {
+  display: grid;
+  grid-row-gap: 0.3rem;
+  
+  &-title {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    
+    transition: all 0.2s ease;
+    
+    &:hover {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+  
+  &-date {
+    color: $red;
+    font-family: $encode-condensed;
+  }
 }
