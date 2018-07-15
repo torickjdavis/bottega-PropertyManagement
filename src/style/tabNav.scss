@@ -8,7 +8,7 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: [start] 1fr [middle] 1fr 1fr [end];
     grid-auto-flow: column;
     justify-tiems: center;
     align-items: center;
@@ -20,14 +20,20 @@
   }
   
   .tab {
+    grid-row: middle/end;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
     text-align: center;
     
+    height: 100%;
     width: 9rem;
     
-    // border-bottom: 0.1rem solid $red;
-    // padding-bottom: 2rem;
+    border-bottom: 0.2rem solid transparent;
+    
+    &.active {
+      color: $red;
+      border-bottom: 0.2rem solid $red;
+    }
   }
 }
