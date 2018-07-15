@@ -1,7 +1,8 @@
 .newsletter-grid {
   grid-row: content-start/content-end;
-  height: 100%;
   display: grid;
-  grid-template-columns: [aside-start] 16rem [aside-end newsletter-start] 1fr [newsletter-end];
+  // newsletter has px width due to image size
+  grid-template-columns: [aside-start] 16rem [aside-end newsletter-start] 960px [newsletter-end];
   grid-template-rows: [content-start box-start] 16rem [box-end archive-start] 1fr [archive-end content-end];
+  justify-content: center;
 }

@@ -1,0 +1,27 @@
+.newsletterLatest {
+  grid-column: newsletter-start/newsletter-end;
+  grid-row: content-start/content-end;
+  
+  display: grid;
+  grid-template-columns: [content-start] 1fr [content-end];
+  // heading has px height due to image size
+  grid-template-rows: [heading-start] 258px [heading-end body-start] 1fr [body-end];
+  
+  & > * {
+    grid-column: content-start/content-end;
+  }
+  
+  &-title, &-image {
+    grid-row: heading-start/heading-end;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  &-image {
+    z-index: -1;
+  }
+  
+  &-body {
+    grid-row: body-start/body-end;
+  }
+}
