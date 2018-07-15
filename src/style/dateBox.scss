@@ -1,0 +1,22 @@
+.dateBox {
+  height: 16rem;
+  width: 16rem;
+  border: 0.1rem solid $red;
+  border-radius: 0.5rem;
+  
+  color: $red;
+  display: grid;
+  justify-items: center;
+  
+  .day {
+    align-self: end;
+    font-size: 7rem;
+    line-height: 8.1rem;
+    margin-bottom: 1rem;
+  }
+  .month-year {
+    align-self: start;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
