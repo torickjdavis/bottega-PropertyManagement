@@ -2,10 +2,13 @@
 .form-input {
 
 	display: grid;
-	grid-template-columns: 12.9rem 50rem;
+	// grid-template-columns: 12.9rem 50rem;
+	grid-template-columns: 3fr 10fr;
 	grid-template-rows: 1fr;
 
 	align-items: center;
+	
+	width: 100%;
 
 	&-title {
 		grid-column: 1/2;
@@ -28,7 +31,7 @@
 
 	input {
 		height: 4rem;
-		width: 50rem;
+		// width: 50rem;
 		border: 1px solid $bright-grey;
 		border-radius: 0.5rem;
 		padding-left: 2rem;

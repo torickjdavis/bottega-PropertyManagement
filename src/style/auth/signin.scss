@@ -5,13 +5,19 @@
 
 .sign-in-form {
 	display: grid;
+	grid-template-columns: [start] 1fr [input-start] 62.9rem [input-end] 1fr [end];
 	justify-items: center;
 
 	.form-title {
 		width: 100%;
 		margin-top: 6.6rem;
+		grid-column: start/end;
 	}
 
+	.email, .password, .login, .text-links {
+		grid-column: input-start/input-end;
+	}
+	
 	.email {
 		margin-top: 7.7rem;
 	}
