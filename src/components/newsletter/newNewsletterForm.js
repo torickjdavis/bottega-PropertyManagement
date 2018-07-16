@@ -11,7 +11,7 @@ class NewNewsletterForm extends Component {
 		const { handleSubmit } = this.props;
 		
 		return (
-			<form onSubmit={ handleSubmit } className='sign-in-form'>
+			<form onSubmit={ handleSubmit } className='newNewsletter-form'>
 				<FormTitle text="Sign In"/>
 				<Field
 					className='email'
@@ -21,25 +21,6 @@ class NewNewsletterForm extends Component {
 					placeholder='Enter Email'
 					title='Email'
 				/>
-				<Field
-					className='password'
-					component={ FormInput }
-					name='password'
-					type='password'
-					placeholder='Password'
-					title='Password'
-				/>
-				<Field
-					className='login'
-					component={ FormButton }
-					name='login'
-					type='submit'
-					title='Sign In'
-				/>
-				<div className="text-links">
-					<TextLink to='/forgot' text='Forgot Password'/>
-					<TextLink to='/signup' text='Not a member? Register here'/>
-				</div>
 			</form>
 		);
 	}

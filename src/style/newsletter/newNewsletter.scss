@@ -2,3 +2,28 @@
   grid-column: content-start/content-end;
   grid-row: content-start/content-end;
 }
+
+.newNewsletter-form {
+	display: grid;
+	grid-template-columns: [start input-start] 102rem [input-end] 1fr [end];
+	justify-items: center;
+
+	.form-title {
+		width: 100%;
+		margin-top: 6.6rem;
+		grid-column: start/end;
+	}
+
+	.email {
+		grid-column: input-start/input-end;
+	}
+	
+	.email {
+		margin-top: 7.7rem;
+	}
+
+	.email,
+	.password {
+		transform: translateX(-6.45rem);
+	}
+}
