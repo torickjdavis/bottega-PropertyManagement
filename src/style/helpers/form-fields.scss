@@ -1,5 +1,5 @@
 // INPUT
-.form-input {
+.form-input, .form-textarea {
 
 	display: grid;
 	// grid-template-columns: 12.9rem 50rem;
@@ -21,7 +21,8 @@
 	}
 }
 
-.form-input {
+.form-input,
+.form-textarea {
 	&-title {
 		color: $red;
 		font-size: 1.8rem;
@@ -29,19 +30,30 @@
 		line-height: 2.3rem;
 	}
 
-	input {
-		height: 4rem;
-		// width: 50rem;
-		border: 1px solid $bright-grey;
-		border-radius: 0.5rem;
-		padding-left: 2rem;
-		font-size: 1.6rem;
-		font-weight: 500;
-
-		font-family: inherit;
+	input, textarea {
+			height: 4rem;
+			width: 100%;
+			border: 1px solid $bright-grey;
+			border-radius: 0.5rem;
+			padding-left: 2rem;
+			font-size: 1.6rem;
+			font-weight: 500;
+	
+			font-family: inherit;
 	}
 }
 
+.form-textarea {
+	&-title {
+		align-self: start;
+	}
+	
+	textarea {
+		height: 35.5rem;
+		resize: none;
+		padding-top: 1rem;
+	}
+}
 // BUTTON
 .form-button {
 	button {

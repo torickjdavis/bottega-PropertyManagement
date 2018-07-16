@@ -14,16 +14,15 @@
 		grid-column: start/end;
 	}
 
-	.email {
+	.newsletter-title, .body {
 		grid-column: input-start/input-end;
 	}
 	
-	.email {
-		margin-top: 7.7rem;
+	.newsletter-title {
+		margin-top: 4.1rem;
 	}
-
-	.email,
-	.password {
-		transform: translateX(-6.45rem);
+	
+	.body {
+		margin-top: 2rem;
 	}
 }
