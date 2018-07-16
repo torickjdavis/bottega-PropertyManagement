@@ -25,6 +25,9 @@ import SignUp from './components/auth/signup';
 // DASHBOARD
 import Dashboard from './components/dashboard';
 
+// Newsletter
+import NewNewsletter from './components/newsletter/newNewsletter';
+
 
 function main() {
   ReactDOM.render(
@@ -37,6 +40,7 @@ function main() {
           <Route path='/signup' component={SignUp}/>
           
           <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+          <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
           </Layout>
         </Switch>
       </Router>

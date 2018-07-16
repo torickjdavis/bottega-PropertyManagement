@@ -6,21 +6,22 @@
 @import 'header';
 
 // AUTH
-@import 'signin';
-@import 'signup';
+@import 'auth/signin';
+@import 'auth/signup';
 
 // HELPERS
-@import 'form-title';
-@import 'form-fields';
-@import 'text-link';
-@import 'button';
+@import 'helpers/form-title';
+@import 'helpers/form-fields';
+@import 'helpers/text-link';
+@import 'helpers/button';
 
 // DASHBOARD
 @import 'dashboard';
 @import 'tabNav';
 
 // NEWSLETTER
-@import 'newsletter-grid';
-@import 'dateBox';
-@import 'archive';
-@import 'newsletterLatest';
+@import 'newsletter/newsletter-grid';
+@import 'newsletter/dateBox';
+@import 'newsletter/archive';
+@import 'newsletter/newsletterLatest';
+@import 'newsletter/newNewsletter';
