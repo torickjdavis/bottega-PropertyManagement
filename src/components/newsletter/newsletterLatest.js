@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 import Button from '../button';
+import History from '../../history';
 
 class NewsletterLatest extends Component {
   handleEdit = () => {
-    console.log('Trying to handle an Edit');
+    History.push('/newsletter/edit');
   }
   
   render() {

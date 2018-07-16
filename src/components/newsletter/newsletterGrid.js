@@ -4,10 +4,11 @@ import DateBox from './dateBox';
 import Archive from './archive';
 import NewsletterLatest from './newsletterLatest';
 import Button from '../button';
+import History from '../../history';
 
 class NewsletterGrid extends Component {
   handleAddNewsletter = () => {
-    this.props.history.push('/newsletter/new');
+    History.push('/newsletter/new');
   }
   
   render() {
