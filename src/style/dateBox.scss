@@ -2,6 +2,8 @@ $border-size: 0.15rem;
 $border-style: $border-size solid $red;
 
 .dateBox {
+  grid-column: aside-start/aside-end;
+  grid-row: box-start/box-end;
   height: 16rem;
   width: 16rem;
   border: $border-style;

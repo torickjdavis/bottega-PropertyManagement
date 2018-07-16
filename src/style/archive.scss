@@ -1,6 +1,7 @@
 .archive {
   grid-column: aside-start/aside-end;
   grid-row: archive-start/archive-end;
+  margin-top: 3.85rem;
   
   display: grid;
   grid-template-rows: [title-start] 2.7rem [title-end items-start] 1fr [items-end];
