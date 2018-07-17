@@ -33,9 +33,14 @@ export class FormTextArea extends Component {
 
 export class FormButton extends Component {
 	render() {
-		const { className, title, input, type } = this.props;
+		const { className, title, input, type, small, alternative } = this.props;
 		return (
-			<div className={`form-button ${className || ''}`}>
+			// line 40 and 41 have a space on the end, because it's a string
+			<div className={`
+				${small ? 'form-button-small' : 'form-button'} 
+				${alternative ? 'alternative' : ''} 
+				${className || ''}
+			`}>
 				<button
 					type={type}
 					{...input}

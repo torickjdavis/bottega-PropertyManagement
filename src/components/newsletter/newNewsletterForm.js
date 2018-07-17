@@ -28,7 +28,15 @@ class NewNewsletterForm extends Component {
 					placeholder='Newsletter Body'
 					title='Newsletter Body'
 				/>
-				
+				<Field
+					className="submit"
+					small={true}
+					alternative={true}
+					component={ FormButton }
+					name="submit"
+					type="submit"
+					title="Submit"
+				/>
 			</form>
 		);
 	}
