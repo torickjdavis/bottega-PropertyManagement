@@ -73,10 +73,11 @@
 	
 	&-small {
 		button {
-			width: 13rem;
+			background-color: white;
 			border: 0.1rem solid $grey;
 			border-radius: 1.6rem;
-			width: 7.4rem;
+			// width: 7.4rem;
+			width: 13rem;
 			height: 2.4rem;
 			font-size: 1.4rem;
 			line-height: 1.7rem;
@@ -85,7 +86,7 @@
 		
 		&.alternative {
 			button {
-				border: none;
+				border: 0.1rem solid $red;
 				color: white;
 				background-color: $red;
 			}

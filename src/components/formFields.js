@@ -33,7 +33,7 @@ export class FormTextArea extends Component {
 
 export class FormButton extends Component {
 	render() {
-		const { className, title, input, type, small, alternative } = this.props;
+		const { className, title, input, type, small, alternative, onClick } = this.props;
 		return (
 			// line 40 and 41 have a space on the end, because it's a string
 			<div className={`
@@ -44,6 +44,7 @@ export class FormButton extends Component {
 				<button
 					type={type}
 					{...input}
+					onClick={onClick}
 				>
 				{title}
 				</button>
