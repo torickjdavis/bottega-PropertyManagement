@@ -7,11 +7,12 @@ import { FormInput, FormButton, FormTextArea, FormImage } from '../formFields';
 class NewNewsletterForm extends Component {
 	render() {
 		
-		const { handleSubmit, title } = this.props;
+		const { handleSubmit, formTitle, newsletterToEdit } = this.props;
+		const { title, body, imageURL } = newsletterToEdit;
 		
 		return (
 			<form onSubmit={ handleSubmit } className='newNewsletter-form'>
-				<FormTitle text={title}/>
+				<FormTitle text={formTitle}/>
 				<Field
 					className='newsletter-title'
 					component={ FormInput }
