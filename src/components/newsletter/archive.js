@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 function ArchiveItem({title, date}) {
   return (
     <div className="archiveItem">
@@ -20,14 +22,22 @@ class Archive extends Component {
       <div className="archive">
         <h3 className="archive-title">Archive</h3>
         <div className="archive-items">
-          <ArchiveItem title='ItemTitle' date={new Date()} />
-          <ArchiveItem title='ItemTitle' date={new Date()} />
-          <ArchiveItem title='ItemTitle' date={new Date()} />
-          <ArchiveItem title='ItemTitle' date={new Date()} />
+          {
+            this.props.newsletters.map(newsletter => {
+              return <ArchiveItem key={newsletter._id} {...newsletter} />;
+            })
+          }
         </div>
       </div>
     );
   }
 }
 
-export default Archive;
+function mapStateToProps(state) {
+  const { newsletters } = state.newsletters;
+  return {
+    newsletters
+  };
+}
+
+export default connect(mapStateToProps)(Archive);
