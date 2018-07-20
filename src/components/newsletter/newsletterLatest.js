@@ -8,7 +8,7 @@ import History from '../../history';
 
 class NewsletterLatest extends Component {
   handleEdit = () => {
-    History.push('/newsletter/edit');
+    History.push(`/newsletter/edit/${this.props._id}`);
   }
   
   render() {

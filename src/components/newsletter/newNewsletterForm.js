@@ -3,16 +3,15 @@ import { reduxForm, Field } from 'redux-form';
 
 import FormTitle from '../formTitle';
 import { FormInput, FormButton, FormTextArea, FormImage } from '../formFields';
-import TextLink from '../textLink';
 
 class NewNewsletterForm extends Component {
 	render() {
 		
-		const { handleSubmit } = this.props;
+		const { handleSubmit, title } = this.props;
 		
 		return (
 			<form onSubmit={ handleSubmit } className='newNewsletter-form'>
-				<FormTitle text="New Newsletter"/>
+				<FormTitle text={title}/>
 				<Field
 					className='newsletter-title'
 					component={ FormInput }
