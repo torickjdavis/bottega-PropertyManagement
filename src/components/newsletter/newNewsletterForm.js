@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 import FormTitle from '../formTitle';
-import { FormInput, FormButton, FormTextArea } from '../formFields';
+import { FormInput, FormButton, FormTextArea, FormImage } from '../formFields';
 import TextLink from '../textLink';
 
 class NewNewsletterForm extends Component {
@@ -19,14 +19,14 @@ class NewNewsletterForm extends Component {
 					name='title'
 					type='text'
 					placeholder='Newsletter Title'
-					title='Body'
+					title='Title'
 				/>
 				<Field
 					className='body'
 					component={ FormTextArea }
 					name='body'
 					placeholder='Newsletter Body'
-					title='Newsletter Body'
+					title='Body'
 				/>
 				<Field
 					className="submit"
@@ -45,6 +45,13 @@ class NewNewsletterForm extends Component {
 					type="button"
 					title="Cancel"
 					onClick={this.props.onCancel}
+				/>
+				<Field
+					className="image"
+					component={ FormImage }
+					name="image"
+					type="file"
+					title="Image"
 				/>
 			</form>
 		);

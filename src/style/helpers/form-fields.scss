@@ -55,6 +55,19 @@
 	}
 }
 // BUTTON
+.form-button, .form-button-small {
+	button {
+		transition: all 0.2s ease;
+		transform: scale(1);
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			transform: scale(0.95); // translateY(2.05px);
+		}
+	}
+}
+
 .form-button {
 	button {
 		height: 4rem;
@@ -93,17 +106,4 @@
 		}
 	}
 	
-}
-
-.form-button, .form-button-small {
-	button {
-		transition: all 0.2s ease;
-		transform: scale(1);
-		&:focus {
-			outline: none;
-		}
-		&:active {
-			transform: scale(0.95); // translateY(2.05px);
-		}
-	}
 }
