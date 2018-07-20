@@ -62,9 +62,23 @@ export class FormImage extends Component {
 				<img
 					src={imageURL}
 				/>
+				<input
+					className='form-image-replace'
+					type='button'
+					// id=''
+					value='Replace'
+					onClick={
+						() => document.querySelector('#file') ? document.querySelector('#file').click() : ''
+					}
+				/>
 				<input 
-					type={type}
 					{...input}
+					type='file'
+					style={{display: 'none'}}
+					id='file'
+					name='file'
+					accepts='image/*'
+					value={undefined}
 				/>
 				{/* Replace Image Button */}
 			</div>

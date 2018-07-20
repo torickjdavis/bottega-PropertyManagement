@@ -52,8 +52,11 @@
 	}
 }
 // BUTTON
-.form-button, .form-button-small {
-	button {
+.form-button,
+.form-button-small,
+.form-image {
+	button,
+	&-replace {
 		transition: all 0.2s ease;
 		transform: scale(1);
 		&:focus {
@@ -107,15 +110,41 @@
 
 // IMAGE
 .form-image {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: [start] 16rem [end];
+	grid-template-rows: [title-start] 1fr [title-end image-start] 13.7rem [image-end];
+	
+	& > * {
+		grid-column: start/end;
+	}
 	
 	&-title {
+		grid-row: title-start/title-end;
 		@include redTitle;
 		margin-bottom: 2rem;
 	}
 	
+	&-replace {
+		grid-row: image-start/image-end;
+		justify-self: center;
+		align-self: center;
+		
+		background-color: white;
+		border: 0.1rem solid white;
+		border-radius: 1.6rem;
+		
+		width: 13rem;
+		height: 2.4rem;
+		
+		color: $red;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		text-align: center;
+	}
+	
 	img {
+		grid-row: image-start/image-end;
+		background-color: $bright-grey;
 		height: 13.7rem;
 		width: 16rem;
 	}
