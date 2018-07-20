@@ -83,7 +83,7 @@ export class FormImage extends Component {
 					style={{display: 'none'}}
 					id='file'
 					name='file'
-					accepts='image/*'
+					accept='image/*'
 					value={undefined}
 					onChange={this.handleSelectedImage}
 				/>
