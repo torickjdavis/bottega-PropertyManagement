@@ -50,7 +50,7 @@ class NewNewsletterForm extends Component {
 					className="image"
 					component={ FormImage }
 					name="image"
-					type="file"
+					// type="file" // always 'file'
 					title="Image"
 				/>
 			</form>

@@ -54,12 +54,18 @@ export class FormButton extends Component {
 }
 
 export class FormImage extends Component {
+	handleSelectedImage = (event) => {
+		let image = document.querySelector('#form-image-img');
+		image.src = URL.createObjectURL(event.target.files[0]);
+	}
+	
 	render() {
-		const { className, title, input, type, imageURL } = this.props;
+		const { className, title, input, imageURL } = this.props;
 		return (
 			<div className={`form-image ${className || ''}`}>
 				<label className='form-image-title'>{title}</label>
 				<img
+					id='form-image-img'
 					src={imageURL}
 				/>
 				<input
@@ -79,8 +85,8 @@ export class FormImage extends Component {
 					name='file'
 					accepts='image/*'
 					value={undefined}
+					onChange={this.handleSelectedImage}
 				/>
-				{/* Replace Image Button */}
 			</div>
 		);
 	}
