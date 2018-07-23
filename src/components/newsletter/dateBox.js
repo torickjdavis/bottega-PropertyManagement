@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { connect } from 'react-redux';
-
 const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec'];
 
 class DateBox extends Component {
@@ -20,12 +18,4 @@ class DateBox extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const { newsletters } = state.newsletters;
-  const latestNewsletter = newsletters[0];
-  return {
-    ...latestNewsletter
-  };
-}
-
-export default connect(mapStateToProps)(DateBox);
+export default DateBox;

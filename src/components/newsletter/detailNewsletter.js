@@ -15,8 +15,8 @@ class DetailNewsletter extends Component {
   render() {
     return (
         <div className='newsletterDetail'>
-          <DateBox />
-          <NewsletterLatest />
+          <DateBox {...this.props.newsletterToEdit}/>
+          <NewsletterLatest {...this.props.newsletterToEdit}/>
         </div>
       );
   }
@@ -24,7 +24,7 @@ class DetailNewsletter extends Component {
 
 function mapStateToProps(state) {
   const { newsletterToEdit } = state.newsletters;
-  return newsletterToEdit;
+  return { newsletterToEdit };
 }
 
 export default connect(mapStateToProps, actions)(DetailNewsletter);
