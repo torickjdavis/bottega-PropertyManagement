@@ -25,7 +25,7 @@ import SignUp from './components/auth/signup';
 // DASHBOARD
 import Dashboard from './components/dashboard';
 
-// Newsletter
+// NEWSLETTER
 import NewNewsletter from './components/newsletter/newNewsletter';
 import EditNewsletter from './components/newsletter/editNewsletter';
 import DetailNewsletter from './components/newsletter/detailNewsletter';
@@ -37,14 +37,21 @@ function main() {
       <Router history={history}>
         <Switch>
           <Layout>
+          {/* AUTH */}
           <Route path='/' exact component={SignIn}/>
           <Route path='/signin' component={SignIn}/>
           <Route path='/signup' component={SignUp}/>
           
+          {/* DASHBOARD */}
           <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+          
+          {/* NEWSLETTER */}
           <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
           <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
           <Route path='/newsletter/detail/:id' component={requireAuth(DetailNewsletter)}/>
+          
+          {/* REQUESTS */}
+          <Route path='/requests/new' component={requireAuth(NewNewsletter)}/>
           </Layout>
         </Switch>
       </Router>
