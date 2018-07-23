@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export class FormInput extends Component {
 	render() {
-		const { className, title, input, type, placeholder } = this.props;
+		const { className, title, input, type, placeholder, editValue } = this.props;
 		return (
 			<div className={`form-input ${className || ''}`}>
 				<label className='form-input-title'>{title}</label>
@@ -10,6 +10,7 @@ export class FormInput extends Component {
 					type={type}
 					placeholder={placeholder}
 					{...input}
+					value={editValue ? editValue : input.value}
 				/>
 			</div>
 		);
@@ -18,13 +19,14 @@ export class FormInput extends Component {
 
 export class FormTextArea extends Component {
 	render() {
-		const { className, title, input, placeholder } = this.props;
+		const { className, title, input, placeholder, editValue } = this.props;
 		return (
 			<div className={`form-textarea ${className || ''}`}>
 				<label className='form-textarea-title'>{title}</label>
 				<textarea
 					placeholder={placeholder}
 					{...input}
+					value={editValue ? editValue : input.value}
 				></textarea>
 			</div>
 		);
