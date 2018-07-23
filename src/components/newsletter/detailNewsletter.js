@@ -6,6 +6,7 @@ import * as actions from '../../actions';
 import DateBox from './dateBox';
 import NewsletterLatest from './newsletterLatest';
 import FormTitle from '../formTitle';
+import { FormButton } from '../formFields';
 
 class DetailNewsletter extends Component {
   
@@ -16,9 +17,15 @@ class DetailNewsletter extends Component {
   render() {
     return (
         <div className='newsletterDetail'>
-          <FormTitle className='title' text='Newsletter Details'/>
+          <FormTitle className='title' text='Newsletter Archive'/>
           <DateBox {...this.props.newsletterToEdit}/>
           <NewsletterLatest {...this.props.newsletterToEdit}/>
+          <FormButton
+            className='cancel'
+            small={true}
+            onClick={() => this.props.history.push('/dashboard')}
+            title='Cancel'
+          />
         </div>
       );
   }
