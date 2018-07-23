@@ -5,6 +5,7 @@ import * as actions from '../../actions';
 
 import DateBox from './dateBox';
 import NewsletterLatest from './newsletterLatest';
+import FormTitle from '../formTitle';
 
 class DetailNewsletter extends Component {
   
@@ -15,6 +16,7 @@ class DetailNewsletter extends Component {
   render() {
     return (
         <div className='newsletterDetail'>
+          <FormTitle className='title' text='Newsletter Details'/>
           <DateBox {...this.props.newsletterToEdit}/>
           <NewsletterLatest {...this.props.newsletterToEdit}/>
         </div>

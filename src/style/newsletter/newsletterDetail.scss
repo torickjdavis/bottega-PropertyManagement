@@ -1,4 +1,19 @@
 .newsletterDetail {
   grid-column: content-start/content-end;
   grid-row: content-start/content-end;
+  
+  justify-content: center;
+  display: grid;
+  // newsletter has px width due to image size
+  grid-template-columns: [aside-start] 16rem [aside-end newsletter-start] 960px [newsletter-end];
+  grid-template-rows: [title-start] 10rem [title-end add-start] 4.7rem [add-end content-start box-start] 16rem [box-end archive-start] 1fr [archive-end content-end];
+  
+  grid-column-gap: 6.85rem;
+  
+  .title {
+    width: 100%;
+    margin-top: 6.6rem;
+    grid-column: 1/-1;
+    grid-row: title-start/title-end;
+  }
 }
