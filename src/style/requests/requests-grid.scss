@@ -1,0 +1,20 @@
+.requests-grid {
+  grid-row: content-start/content-end;
+  justify-content: center;
+  
+  display: grid;
+  // newsletter has px width due to image size
+  grid-template-columns: [aside-start] 16rem [aside-end newsletter-start] 960px [newsletter-end];
+  grid-template-rows: [add-start] 4.7rem [add-end content-start box-start] 16rem [box-end archive-start] 1fr [archive-end content-end];
+  
+  grid-column-gap: 6.85rem;
+  
+  &-addButton {
+    grid-column: newsletter-start/newsletter-end;
+    grid-row: add-start/add-end;
+    justify-self: end;
+    align-self: center;
+    
+    margin-right: 1rem;
+  }
+}
