@@ -9,17 +9,14 @@ class RequestBoxes extends Component {
           <ActionBox
             title={'Pending'}
             count={2}
-            type={'pending'}
           />
           <ActionBox
             title={'In-Progress'}
             count={3}
-            type={'inProgress'}
           />
           <ActionBox
             title={'Complete'}
             count={5}
-            type={'complete'}
           />
         </div>
       );
