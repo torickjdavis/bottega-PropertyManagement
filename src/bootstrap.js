@@ -43,7 +43,10 @@ function main() {
           <Route path='/signup' component={SignUp}/>
           
           {/* DASHBOARD */}
-          <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+          {/* TEMPORARILY REMOVED FOR DEV: 
+            <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+          */}
+          <Route path='/dashboard' component={Dashboard}/>
           
           {/* NEWSLETTER */}
           <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
