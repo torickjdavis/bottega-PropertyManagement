@@ -6,9 +6,21 @@ class RequestBoxes extends Component {
   render() {
     return (
         <div className='requestsBoxes'>
-          <ActionBox title={'pending'} count={2} />
-          <ActionBox title={'in progress'} count={3} />
-          <ActionBox title={'complete'} count={5} />
+          <ActionBox
+            title={'Pending'}
+            count={2}
+            type={'pending'}
+          />
+          <ActionBox
+            title={'In-Progress'}
+            count={3}
+            type={'inProgress'}
+          />
+          <ActionBox
+            title={'Complete'}
+            count={5}
+            type={'complete'}
+          />
         </div>
       );
   }
