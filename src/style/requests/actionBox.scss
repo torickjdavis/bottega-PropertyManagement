@@ -50,4 +50,29 @@ $border-style: $border-size solid $red;
     border-bottom: none;
     border-left: none;
   }
+  
+  &.active {
+    background-color: $red;
+    border-color: $red;
+    
+    .count, .title {
+      color: white;
+    }
+    
+    &::after {
+      background-color: $red;
+    }
+  }
+  
+  &.inactive {
+    border-color: $bright-grey;
+    
+    .count, .title {
+      color: $grey;
+    }
+    
+    &::after {
+      display: none;
+    }
+  }
 }
