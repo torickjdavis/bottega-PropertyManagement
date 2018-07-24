@@ -1,5 +1,7 @@
 .requestsBoxes {
-  background-color: cornflowerblue;
   grid-column: aside-start/aside-end;
   grid-row: content-start/content-end;
+  
+  display: grid;
+  grid-row-gap: 1.55rem;
 }

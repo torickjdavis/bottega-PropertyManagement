@@ -1,0 +1,53 @@
+$border-size: 0.15rem;
+$border-style: $border-size solid $red;
+
+.actionBox {
+  height: 16rem;
+  width: 16rem;
+  border: $border-style;
+  border-radius: 0.5rem;
+  
+  color: $red;
+  display: grid;
+  grid-template-rows: 8.1rem 2.3rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  
+  .count {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    
+    align-self: end;
+    font-size: 7rem;
+    line-height: 8.1rem;
+    margin-bottom: 1rem;
+  }
+  .title {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    
+    align-self: start;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  
+  &::after { // point
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    
+    content: '';
+    height: 4rem;
+    width: 4rem;
+    background-color: white;
+    
+    justify-self: end;
+    align-self: center;
+    
+    transform: translateX(52%) rotate(45deg);
+    
+    border: $border-style;
+    border-bottom: none;
+    border-left: none;
+  }
+}
