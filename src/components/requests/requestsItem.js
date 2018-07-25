@@ -39,7 +39,7 @@ class RequestsItem extends Component {
           <Button className='move' callback={() => console.log('Trying to change requestItem status')} icon='fas fa-wrench' />
           <div className='description'>
             <AnimateHeight duration={300} height={this.state.height}>
-              <div className='description'>
+              <div className='itemDescription'>
                 <img src='http://via.placeholder.com/160x94'/>
                 <p>lorem ipsum, need some text umm... lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
               </div>
