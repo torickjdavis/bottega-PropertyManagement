@@ -7,8 +7,8 @@ import NewNewsletterForm from '../newsletter/newNewsletterForm';
 
 class NewRequest extends Component {
   
-  onSubmit = (fields) => {
-    this.props.createNewRequest(this.props._id, {}, () => {
+  onSubmit = fields => {
+    this.props.createNewRequest(this.props._id, fields, () => {
       this.props.history.push('/dashboard');
     });
   }
