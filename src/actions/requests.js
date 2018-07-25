@@ -14,15 +14,17 @@ export function changeSelectedRequestType(boxType) {
   );
 }
 
-export function createNewRequest(newRequest, success) {
-  return function() {
-    axios.post(`${ROOT_URL}/request/new`, newRequest)
-      .then(response => {
-        console.log(response.data);
-        success();
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+export function createNewRequest(userID, newRequest, success) {
+  console.log('token: ', window.localStorage.getItem('token'));
+  console.log('userID: ', userID);
+  // return function() {
+  //   axios.post(`${ROOT_URL}/requests/new`, newRequest)
+  //     .then(response => {
+  //       console.log(response.data);
+  //       success();
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
 }

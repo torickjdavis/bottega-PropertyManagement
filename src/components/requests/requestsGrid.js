@@ -11,7 +11,7 @@ import Requests from './requests';
 
 class RequestsGrid extends Component {
   handleAddRequest = () => {
-    History.push('/request/new');
+    History.push('/requests/new');
   }
   
   render() {

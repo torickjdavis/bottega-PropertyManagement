@@ -43,14 +43,13 @@ function main() {
           <Route path='/signin' component={SignIn}/>
           <Route path='/signup' component={SignUp}/>
           
-          <Route path='/dashboard' component={Dashboard}/>
-          {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/> */}
+          <Route path='/dashboard' component={requireAuth(Dashboard)}/>
           
           <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
           <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
           <Route path='/newsletter/detail/:id' component={requireAuth(DetailNewsletter)}/>
           
-          <Route path='/request/new' component={requireAuth(NewRequest)}/>
+          <Route path='/requests/new' component={requireAuth(NewRequest)}/>
           </Layout>
         </Switch>
       </Router>
