@@ -7,7 +7,7 @@
   
   .icon {
     grid-column: icon-start/icon-end;
-    grid-row: title-start/title-end;
+    grid-row: title-start/tenant-end;
     justify-self: center;
   }
   
@@ -45,12 +45,52 @@
     display: grid;
     grid-column-gap: 4rem;
     grid-auto-flow: column;
+  }
+
+}
+
+.requestsItem {
+  
+  .icon {
+    font-size: 3rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+  }
+  
+  .tenant-unit {
+    color: $red;
+    font-family: $encode-condensed;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  
+  .arrow {
+    color: $grey;
+    font-size: 3rem;
+  }
+  
+  .date {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  
+  .move {
+    
+  }
+  
+  .description {
+    
     img {
       
     }
     
     p {
-      
+      font-size: 1.4rem;
+      line-height: 1.7rem;
     }
   }
 
