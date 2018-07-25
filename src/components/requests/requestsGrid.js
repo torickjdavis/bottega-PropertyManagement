@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-// import { connect } from 'react-redux';
-// import * as actions from '../../actions';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 import Button from '../button';
 import History from '../../history';
@@ -12,6 +12,10 @@ import Requests from './requests';
 class RequestsGrid extends Component {
   handleAddRequest = () => {
     History.push('/requests/new');
+  }
+  
+  componentDidMount() {
+    this.props.fetchRequests();
   }
   
   render() {
@@ -26,8 +30,6 @@ class RequestsGrid extends Component {
   }
 }
 
-/*function mapStateToProps(state) {}
+// function mapStateToProps(state) {}
 
-export default connect(mapStateToProps, actions)(RequestsGrid);*/
-
-export default RequestsGrid;
+export default connect(null, actions)(RequestsGrid);

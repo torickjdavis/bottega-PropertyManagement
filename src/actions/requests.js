@@ -34,3 +34,17 @@ export function createNewRequest(userID, formData, success) {
       });
   };
 }
+
+export function fetchRequests() {
+  const token = window.localStorage.getItem('token');
+  return () => {
+    axios.get(`${ROOT_URL}/requests`, {
+      headers: { authorization: token }
+    })
+    .then(response => {
+      console.log(response.data);
+      
+    })
+    .catch(err => console.log(err));
+  };
+}
