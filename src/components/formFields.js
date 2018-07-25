@@ -56,11 +56,11 @@ export class FormButton extends Component {
 }
 
 export class FormImage extends Component {
-	// constructor() {
-	// 	super();
+	constructor() {
+		super();
 		
-	// 	this.handleSelectedImage = this.handleSelectedImage.bind(this);
-	// }
+		this.handleSelectedImage = this.handleSelectedImage.bind(this);
+	}
 	
 	handleSelectedImage(event) {
 		const { input: { onChange } } = this.props;

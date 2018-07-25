@@ -14,18 +14,23 @@ export function changeSelectedRequestType(boxType) {
   );
 }
 
-export function createNewRequest(userID, fields, success) {
-  console.log('token: ', window.localStorage.getItem('token'));
+export function createNewRequest(userID, formData, success) {
+  const token = window.localStorage.getItem('token');
   console.log('userID: ', userID);
-  console.log('fields: ', fields);
-  // return function() {
-  //   axios.post(`${ROOT_URL}/requests/new`, newRequest)
-  //     .then(response => {
-  //       console.log(response.data);
-  //       success();
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // };
+  console.log('formData: ', formData);
+  return function() {
+    axios.post(`${ROOT_URL}/requests/new`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        authorization: token
+      }
+    })
+      .then(response => {
+        console.log(response.data);
+        // success();
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 }
