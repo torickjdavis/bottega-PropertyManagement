@@ -5,6 +5,8 @@ import Button from '../button';
 
 import AnimateHeight from 'react-animate-height';
 
+import { ROOT_URL } from '../../config';
+
 class RequestsItem extends Component {
   constructor() {
     super();
@@ -26,25 +28,28 @@ class RequestsItem extends Component {
   }
   
   render() {
+    const { _id, title, body, date, imageUrl} = this.props;
+    const parsedDate = new Date(date);
+    
     return (
         <div className='requestsItem'>
           <Icon icon='fas fa-exclamation-triangle'/>
           <div className='title'>
-            <p>Hey, the thing is broken.</p>
+            <p>{ title }</p>
             <Icon callback={(event) => this.toggleDropdown(event)} className='arrow' icon='fas fa-sort-down'/>
           </div>
           <div className='tenant-unit'>
             Name - Unit #
           </div>
           <div className='date'>
-            mm/dd/yy
+            {`${parsedDate.getMonth() + 1}/${parsedDate.getDate()}/${parsedDate.getFullYear() - 2000}`}
           </div>
           <Button className='move' callback={() => console.log('Trying to change requestItem status')} icon='fas fa-wrench' />
           <div className='description'>
             <AnimateHeight duration={300} height={this.state.height}>
               <div className='itemDescription'>
-                <img src='http://via.placeholder.com/160x94'/>
-                <p>lorem ipsum, need some text umm... lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <img src={`${ROOT_URL}/uploads/${imageUrl}`}/>
+                <p>{ body }</p>
               </div>
             </AnimateHeight>
           </div>
