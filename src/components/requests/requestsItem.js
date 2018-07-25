@@ -14,9 +14,12 @@ class RequestsItem extends Component {
     };
   }
   
-  toggleDropdown = () => {
+  toggleDropdown = (event) => {
+    let item = event.target.parentElement.parentElement.parentElement; // icon -> anchor -> title -> requestsItem
+    item.classList.toggle('background-grey');
+    
     if (this.state.height == 0) {
-      this.setState({ height: 'auto' })
+      this.setState({ height: 'auto' });
     } else {
       this.setState({ height: 0 });
     }
@@ -28,7 +31,7 @@ class RequestsItem extends Component {
           <Icon icon='fas fa-exclamation-triangle'/>
           <div className='title'>
             <p>Hey, the thing is broken.</p>
-            <Icon callback={() => this.toggleDropdown()} className='arrow' icon='fas fa-sort-down'/>
+            <Icon callback={(event) => this.toggleDropdown(event)} className='arrow' icon='fas fa-sort-down'/>
           </div>
           <div className='tenant-unit'>
             Name - Unit #

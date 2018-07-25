@@ -52,11 +52,25 @@
 
 }
 
+.background-grey {
+  background: $alt-grey;
+}
+
 .requestsItem {
+  transition: all 0.3s ease;
   padding: 0.6rem 0;
   
   &:hover {
     background-color: $alt-grey;
+    
+    .date {
+      transform: translateX(-10rem);
+    }
+    
+    .move {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
   
   .icon {
@@ -85,12 +99,15 @@
   }
   
   .date {
+    transition: all 0.3s ease;
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
   
   .move {
-    
+    transition: all 0.3s ease;
+    transform: translateX(10rem);
+    opacity: 0;
   }
   
   .itemDescription {
