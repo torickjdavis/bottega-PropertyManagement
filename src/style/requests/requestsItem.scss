@@ -1,2 +1,40 @@
 .requestsItem {
+  display: grid;
+  grid-template-columns: [icon-start] 6.8rem [icon-end title-start] 1fr [title-end arrow-start] 6.8rem [arrow-end date-start] 10rem [date-end];
+  grid-template-rows: [title-start] 3.4rem [title-end tenant-start] 3.4rem [tenant-end description-start] 14.7rem [description-end];
+
+  .icon {
+    
+  }
+  
+  .title {
+    
+  }
+  
+  .tenant-unit {
+    
+  }
+  
+  .arrow {
+    
+  }
+  
+  .date {
+    
+  }
+  
+  .move {
+    
+  }
+  
+  .description {
+    img {
+      
+    }
+    
+    p {
+      
+    }
+  }
+
 }

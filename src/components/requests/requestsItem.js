@@ -19,6 +19,10 @@ class RequestsItem extends Component {
             mm/dd/yy
           </div>
           <Button className='move' callback={() => console.log('Trying to change requestItem status')} icon='fas fa-wrench' />
+          <div className='description'>
+            <img src='http://via.placeholder.com/160x94'/>
+            <p>lorem ipsum, need some text umm...</p>
+          </div>
         </div>
       );
   }
