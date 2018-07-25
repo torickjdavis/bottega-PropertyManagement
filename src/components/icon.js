@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Icon({className, icon}) {
+export default function Icon({className, icon, callback}) {
   return (
-    <div className={`icon ${className ? className : ''}`}>
+    <a onClick={callback} className={`icon ${className ? className : ''}`}>
       <i className={icon}></i>
-    </div>
+    </a>
   );
 }
