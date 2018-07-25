@@ -1,7 +1,7 @@
 .requestsItem {
   display: grid;
   grid-template-columns: [start icon-start] 10rem [icon-end title-start description-start] 1fr [title-end arrow-start] 6.8rem [arrow-end date-start] 10rem [date-end description-end end] 6rem;
-  grid-template-rows: [start title-start] 3.4rem [title-end tenant-start] 3.4rem [tenant-end description-start] 14.7rem [description-end end];
+  grid-template-rows: [start title-start] 3.4rem [title-end tenant-start] 1.5rem [tenant-end description-start] 1fr [description-end end];
 
   align-items: center;
   
@@ -51,6 +51,11 @@
 }
 
 .requestsItem {
+  padding: 0.6rem 0;
+  
+  &:hover {
+    background-color: $alt-grey;
+  }
   
   .icon {
     font-size: 2.7rem;
@@ -87,6 +92,8 @@
   }
   
   .description {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     
     img {
       

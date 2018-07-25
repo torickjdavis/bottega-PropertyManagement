@@ -28,7 +28,7 @@ class RequestsItem extends Component {
           <Icon icon='fas fa-exclamation-triangle'/>
           <div className='title'>
             <p>Hey, the thing is broken.</p>
-            <Icon callback={() => this.toggleDropdown()}className='arrow' icon='fas fa-sort-down'/>
+            <Icon callback={() => this.toggleDropdown()} className='arrow' icon='fas fa-sort-down'/>
           </div>
           <div className='tenant-unit'>
             Name - Unit #
