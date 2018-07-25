@@ -14,16 +14,17 @@
   .title {
     grid-column: title-start/title-end;
     grid-row: title-start/title-end;
+    align-self: end;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
   }
   
   .tenant-unit {
     grid-column: title-start/title-end;
     grid-row: tenant-start/tenant-end;
-  }
-  
-  .arrow {
-    grid-column: arrow-start/arrow-end;
-    grid-row: title-start/title-end;
+    align-self: start;
   }
   
   .date {
@@ -56,9 +57,17 @@
   }
   
   .title {
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 2.3rem;
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.3rem;
+      margin-right: 2.5rem;
+    }
+    
+    .arrow {
+      color: $grey;
+      font-size: 3rem;
+    }
   }
   
   .tenant-unit {
@@ -66,11 +75,6 @@
     font-family: $encode-condensed;
     font-size: 1.3rem;
     line-height: 1.6rem;
-  }
-  
-  .arrow {
-    color: $grey;
-    font-size: 3rem;
   }
   
   .date {
