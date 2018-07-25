@@ -1,5 +1,6 @@
 import {
-  CHANGE_SELECTED_REQUEST_TYPE
+  CHANGE_SELECTED_REQUEST_TYPE,
+  SET_REQUESTS
 } from './types';
 
 import axios from 'axios';
@@ -37,12 +38,15 @@ export function createNewRequest(userID, formData, success) {
 
 export function fetchRequests() {
   const token = window.localStorage.getItem('token');
-  return () => {
+  return (dispatch) => {
     axios.get(`${ROOT_URL}/requests`, {
       headers: { authorization: token }
     })
     .then(response => {
-      console.log(response.data);
+      dispatch({
+        type: SET_REQUESTS,
+        payload: response.data
+      });
       
     })
     .catch(err => console.log(err));
