@@ -1,33 +1,50 @@
 .requestsItem {
   display: grid;
-  grid-template-columns: [icon-start] 6.8rem [icon-end title-start] 1fr [title-end arrow-start] 6.8rem [arrow-end date-start] 10rem [date-end];
-  grid-template-rows: [title-start] 3.4rem [title-end tenant-start] 3.4rem [tenant-end description-start] 14.7rem [description-end];
+  grid-template-columns: [start icon-start] 6.8rem [icon-end title-start description-start] 1fr [title-end arrow-start] 6.8rem [arrow-end date-start] 10rem [date-end description-end end] 6rem;
+  grid-template-rows: [start title-start] 3.4rem [title-end tenant-start] 3.4rem [tenant-end description-start] 14.7rem [description-end end];
 
+  align-items: center;
+  
   .icon {
-    
+    grid-column: icon-start/icon-end;
+    grid-row: title-start/title-end;
+    justify-self: center;
   }
   
   .title {
-    
+    grid-column: title-start/title-end;
+    grid-row: title-start/title-end;
   }
   
   .tenant-unit {
-    
+    grid-column: title-start/title-end;
+    grid-row: tenant-start/tenant-end;
   }
   
   .arrow {
-    
+    grid-column: arrow-start/arrow-end;
+    grid-row: title-start/title-end;
   }
   
   .date {
-    
+    grid-column: date-start/date-end;
+    grid-row: title-start/title-end;
+    text-align: right;
   }
   
   .move {
-    
+    grid-column: date-start/date-end;
+    grid-row: title-start/title-end;
+    justify-self: end;
   }
   
   .description {
+    grid-column: description-start/description-end;
+    grid-row: description-start/description-end;
+    
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-auto-flow: column;
     img {
       
     }
