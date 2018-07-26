@@ -48,7 +48,7 @@ class RequestsItem extends Component {
           <div className='description'>
             <AnimateHeight duration={300} height={this.state.height}>
               <div className='itemDescription'>
-                <img src={`${ROOT_URL}/uploads/${imageUrl}`}/>
+                <img src={`${ROOT_URL}/${imageUrl}`}/>
                 <p>{ body }</p>
               </div>
             </AnimateHeight>
