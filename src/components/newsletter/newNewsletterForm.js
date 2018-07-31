@@ -14,13 +14,13 @@ class NewNewsletterForm extends Component {
 			
 		} = this.props;
 		
-		let title, body, imageURL;
+		let title, body, imageUrl;
 
 		if(newsletterToEdit)
 		{
 			title = newsletterToEdit.title;
 			body = newsletterToEdit.body;
-			imageURL = newsletterToEdit.imageURL;
+			imageUrl = newsletterToEdit.imageUrl;
 		}
 		
 		return (
@@ -67,7 +67,7 @@ class NewNewsletterForm extends Component {
 					name="image"
 					// type="file" // always 'file'
 					title="Image"
-					imageURL={imageURL}
+					imageUrl={imageUrl}
 				/>
 			</form>
 		);

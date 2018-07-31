@@ -33,12 +33,11 @@ export function fetchNewsletterWithId(id) {
   };
 }
 
-export function createNewNewsletter(userID, formData, success) {
+export function createNewNewsletter(formData, success) {
   const token = window.localStorage.getItem('token');
-  console.log('userID: ', userID);
   console.log('formData: ', formData);
   return function() {
-    axios.post(`${ROOT_URL}/newsletters/new`, formData, {
+    axios.post(`${ROOT_URL}/newsletter/new`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         authorization: token
@@ -46,7 +45,7 @@ export function createNewNewsletter(userID, formData, success) {
     })
       .then(response => {
         console.log(response.data);
-        // success();
+        success();
       })
       .catch(err => {
         console.log(err);

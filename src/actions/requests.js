@@ -17,8 +17,8 @@ export function changeSelectedRequestType(boxType) {
 
 export function createNewRequest(userID, formData, success) {
   const token = window.localStorage.getItem('token');
-  console.log('userID: ', userID);
-  console.log('formData: ', formData);
+  // console.log('userID: ', userID);
+  // console.log('formData: ', formData);
   return function() {
     axios.post(`${ROOT_URL}/requests/new`, formData, {
       headers: {
