@@ -30,8 +30,15 @@ class RequestsItem extends Component {
     }
   }
   
+  handleStatus = () => {
+    const { _id, status } = this.props;
+    this.props.changeStatus({_id, status}, () => {
+      this.props.fetchRequests();
+    });
+  }
+  
   render() {
-    const { _id, title, body, date, imageUrl, status } = this.props;
+    const { title, body, date, imageUrl } = this.props;
     const parsedDate = new Date(date);
     
     return (
@@ -47,7 +54,7 @@ class RequestsItem extends Component {
           <div className='date'>
             {`${parsedDate.getMonth() + 1}/${parsedDate.getDate()}/${parsedDate.getFullYear() - 2000}`}
           </div>
-          <Button className='move' callback={() => this.props.changeStatus({_id, status})} icon='fas fa-wrench' />
+          <Button className='move' callback={() => this.handleStatus() } icon='fas fa-wrench' />
           <div className='description'>
             <AnimateHeight duration={300} height={this.state.height}>
               <div className='itemDescription'>
