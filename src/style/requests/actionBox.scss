@@ -14,7 +14,34 @@ $border-style: $border-size solid $red;
   justify-items: center;
   align-content: center;
   
-  .count {
+  &:hover {
+    &.active, &.inactive { // added to increase specificity
+      border-color: $red;
+      background-color: white;
+      
+      .count {
+        transform: translateX(10rem);
+        opacity: 0;
+      }
+      
+      .icon {
+        transform: translateX(0rem);
+        opacity: 1;
+      }
+      
+      .title {
+        color: $red;
+      }
+      
+      &::after {
+        display: none;
+      }
+    }
+  }
+  
+  .count, .icon {
+    transition: all 0.2s ease;
+    
     grid-column: 1/-1;
     grid-row: 1/2;
     
@@ -22,7 +49,16 @@ $border-style: $border-size solid $red;
     font-size: 7rem;
     line-height: 8.1rem;
     margin-bottom: 1rem;
+  
+    transform: translateX(0rem);
   }
+  
+  .icon {
+    transform: translateX(-10rem);
+    opacity: 0;
+    font-size: 5rem;
+  }
+  
   .title {
     grid-column: 1/-1;
     grid-row: 2/3;

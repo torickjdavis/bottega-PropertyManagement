@@ -12,14 +12,17 @@ class RequestBoxes extends Component {
           <ActionBox
             title={'Pending'}
             count={pendingCount}
+            icon='fas fa-exclamation-triangle'
           />
           <ActionBox
             title={'In-Progress'}
             count={progressCount}
+            icon='fas fa-wrench'
           />
           <ActionBox
             title={'Complete'}
             count={completeCount}
+            icon='fas fa-check-circle'
           />
         </div>
       );
