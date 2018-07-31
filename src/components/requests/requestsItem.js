@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
+
 import Icon from '../icon';
 import Button from '../button';
 
@@ -28,7 +31,7 @@ class RequestsItem extends Component {
   }
   
   render() {
-    const { _id, title, body, date, imageUrl} = this.props;
+    const { _id, title, body, date, imageUrl, status } = this.props;
     const parsedDate = new Date(date);
     
     return (
@@ -44,7 +47,7 @@ class RequestsItem extends Component {
           <div className='date'>
             {`${parsedDate.getMonth() + 1}/${parsedDate.getDate()}/${parsedDate.getFullYear() - 2000}`}
           </div>
-          <Button className='move' callback={() => console.log('Trying to change requestItem status')} icon='fas fa-wrench' />
+          <Button className='move' callback={() => this.props.changeStatus({_id, status})} icon='fas fa-wrench' />
           <div className='description'>
             <AnimateHeight duration={300} height={this.state.height}>
               <div className='itemDescription'>
@@ -58,4 +61,4 @@ class RequestsItem extends Component {
   }
 }
 
-export default RequestsItem;
+export default connect(null, actions)(RequestsItem);

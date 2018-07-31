@@ -52,3 +52,21 @@ export function fetchRequests() {
     .catch(err => console.log(err));
   };
 }
+
+export function changeStatus({_id, status}) {
+  const token = window.localStorage.getItem('token');
+  
+  return () => {
+    console.log('Attempting to update request');
+    
+    axios.post(`${ROOT_URL}/requests/update-status`, {_id, status}, {
+      headers: { authorization: token }
+    })
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  };
+}
