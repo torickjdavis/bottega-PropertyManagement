@@ -9,6 +9,8 @@ import History from '../../history';
 import RequestsBoxes from './requestsBoxes';
 import Requests from './requests';
 
+import RequireAdmin from '../auth/requireAdmin';
+
 class RequestsGrid extends Component {
   handleAddRequest = () => {
     History.push('/requests/new');
@@ -22,7 +24,9 @@ class RequestsGrid extends Component {
     
     return (
       <div className="requests-grid">
-        <Button className="requests-grid-addButton" icon="fas fa-plus" callback={() => this.handleAddRequest()}/>
+        <RequireAdmin>
+          <Button className="requests-grid-addButton" icon="fas fa-plus" callback={() => this.handleAddRequest()}/>
+        </RequireAdmin>
         <RequestsBoxes />
         <Requests />
       </div>
