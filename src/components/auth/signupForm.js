@@ -13,9 +13,9 @@ class SignUpForm extends Component {
 			<form onSubmit={ handleSubmit } className='sign-up-form'>
 				<FormTitle text="New User"/>
 				<Field
-					className='fullName'
+					className='fullname'
 					component={ FormInput }
-					name='fullName'
+					name='fullname'
 					type='text'
 					placeholder='Enter Your Full Name'
 					title='Full Name'

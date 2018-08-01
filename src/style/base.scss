@@ -21,7 +21,7 @@ body {
 	height: 100vh;
 
 	display: grid;
-	grid-template-rows: [page-start header-start] 13.6rem [header-end bar-start] 4rem [bar-end content-start] 1fr [content-end page-end];
+	grid-template-rows: [page-start header-start] 13.6rem [header-end bar-start] auto [bar-end content-start] 1fr [content-end page-end];
 	grid-template-columns: [page-start] 14rem [content-start] 1fr [content-end] 14rem [page-end];
 }
 

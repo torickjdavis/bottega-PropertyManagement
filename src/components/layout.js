@@ -6,10 +6,12 @@ import Header, { HeaderBar } from './header';
 
 class Layout extends Component {
 	render() {
+		const { title, subtitle, hideBar } = this.props;
+		
 		return (
 			<section className="layout">
-				<Header title="Welcome to HOA Manager!" subtitle="Please sign in to continue."/>
-				<HeaderBar/>
+				<Header title={title} subtitle={subtitle}/>
+				{ hideBar ? '' : <HeaderBar/>}
 				{this.props.children}
 			</section>
 		);
@@ -17,7 +19,10 @@ class Layout extends Component {
 }
 
 function mapStateToProps(state) {
-	return state;
+	const header = state.header;
+	return {
+		...header
+	};
 }
 
 export default connect(mapStateToProps)(Layout);

@@ -1,4 +1,4 @@
-import { UPDATE_HEADER } from '../../actions/types';
+import { UPDATE_HEADER } from '../actions/types';
 
 const INITIAL_STATE = {
   title: '',
@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 }
 
 export default function(state = INITIAL_STATE, action) {
-  switch(action) {
+  switch(action.type) {
     case UPDATE_HEADER:
       const { title, subtitle, hideBar } = action.payload;
       return {
@@ -15,7 +15,7 @@ export default function(state = INITIAL_STATE, action) {
         title,
         subtitle,
         hideBar
-      }
+      };
       
       // return {
       //   ...state,

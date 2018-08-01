@@ -10,8 +10,6 @@ export default function Header({ title, subtitle }) {
 	);
 }
 
-export function HeaderBar() {
-	return (
-		<div className="bar"></div>
-	);
+export function HeaderBar({hideBar}) {
+	return <div className="bar"></div>;
 }

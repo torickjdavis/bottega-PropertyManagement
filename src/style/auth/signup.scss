@@ -8,10 +8,10 @@
 	grid-template-columns: [start] 1fr [input-start] 62.9rem [input-end] 1fr [end];
 	justify-items: center;
 
-	.fullName, .unit, .email, .password, .text-links {
+	.fullname, .unit, .email, .password, .text-links {
 		grid-column: input-start/input-end;
 	}
-	.fullName {
+	.fullname {
 		margin-top: 7.7rem;
 	}
 	
