@@ -64,7 +64,8 @@ class EditNewsletterForm extends Component {
 }
 
 EditNewsletterForm = reduxForm({
-	form: 'editNewsletter'
+	form: 'editNewsletter',
+	enableReinitialize: true
 })(EditNewsletterForm);
 
 
