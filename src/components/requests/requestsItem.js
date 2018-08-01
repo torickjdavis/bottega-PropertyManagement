@@ -72,7 +72,7 @@ class RequestsItem extends Component {
             <Icon callback={(event) => this.toggleDropdown(event)} className='arrow' icon='fas fa-sort-down'/>
           </div>
           <div className='tenant-unit'>
-            Name - Unit #
+            {this.props.fullname} - Unit {this.props.unit} {/* NEED TO SPECIFY REQUEST CREATOR */}
           </div>
           <div className='date'>
             {`${parsedDate.getMonth() + 1}/${parsedDate.getDate()}/${parsedDate.getFullYear() - 2000}`}
@@ -93,4 +93,12 @@ class RequestsItem extends Component {
   }
 }
 
-export default connect(null, actions)(RequestsItem);
+function mapStateToProps(state) {
+  const { fullname, unit } = state.auth.user;
+  return {
+    fullname,
+    unit
+  }
+}
+
+export default connect(mapStateToProps, actions)(RequestsItem);
