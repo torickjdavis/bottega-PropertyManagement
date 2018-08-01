@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header({ title, subtitle }) {
+	
 	return (
 		<header>
-			<h1 className="title">Welcome to HOA Manager!</h1>
-			<p className="subtitle">Please sign in to continue.</p>
+			<h1 className="title">{title}</h1>
+			<p className="subtitle">{subtitle}</p>
 		</header>
 	);
 }

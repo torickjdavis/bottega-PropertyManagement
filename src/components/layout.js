@@ -6,7 +6,7 @@ class Layout extends Component {
 	render() {
 		return (
 			<section className="layout">
-				<Header/>
+				<Header title="Welcome to HOA Manager!" subtitle="Please sign in to continue."/>
 				<HeaderBar/>
 				{this.props.children}
 			</section>
