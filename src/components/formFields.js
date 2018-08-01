@@ -69,13 +69,13 @@ export class FormImage extends Component {
 	}
 	
 	render() {
-		const { className, title, input } = this.props;
+		const { className, title, input, imageUrl } = this.props;
 		return (
 			<div className={`form-image ${className || ''}`}>
 				<label className='form-image-title'>{title}</label>
 				<img
 					id='form-image-img'
-					// src={imageUrl}
+					src={imageUrl}
 				/>
 				<input
 					className='form-image-replace'
