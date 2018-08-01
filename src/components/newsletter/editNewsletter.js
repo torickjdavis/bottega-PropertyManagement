@@ -8,8 +8,18 @@ import EditNewsletterForm from './editNewsletterForm';
 class EditNewsletter extends Component {
   
   onSubmit = (fields) => {
-    this.props.history.push('/dashboard');
-    console.log('trying to submit');
+    const { title, body, image } = fields;
+    
+    let formData = new FormData();
+    formData.append('title', title);
+    formData.append('body', body);
+    if(image != undefined) {
+      formData.append('image', image);
+    }
+    
+    this.props.editNewsletter(formData, () => {
+      this.props.history.push('/dashboard');
+    });
   }
   
   onCancel = () => {
