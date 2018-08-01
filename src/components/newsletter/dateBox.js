@@ -9,10 +9,11 @@ class DateBox extends Component {
       return <div>...Fetching Newsletters</div>;
     }
     
+    const parsedDate = new Date(date);
     return (
       <div className="dateBox">
-        <div className="day">{ date.getDate() }</div>
-        <div className="month-year">{ monthNames[date.getMonth()]} {date.getFullYear()}</div>
+        <div className="day">{ parsedDate.getDate() }</div>
+        <div className="month-year">{ monthNames[parsedDate.getMonth()]} {parsedDate.getFullYear()}</div>
       </div>
     );
   }

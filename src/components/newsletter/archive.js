@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import History from '../../history';
 
 function ArchiveItem({title, date, _id, callback}) {
+  const parsedDate = new Date(date);
   return (
     <div className="archiveItem">
       <a onClick={() => callback(_id)} className="archiveItem-title">{title}</a>
@@ -12,7 +13,7 @@ function ArchiveItem({title, date, _id, callback}) {
         {/* 2000 for the year, to be fixed if used in a different era.
             + 1 for Month is an index.
         */}
-        {`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear() - 2000}`}
+        {`${parsedDate.getMonth() + 1}/${parsedDate.getDate()}/${parsedDate.getFullYear() - 2000}`}
       </div>
     </div>
   );
