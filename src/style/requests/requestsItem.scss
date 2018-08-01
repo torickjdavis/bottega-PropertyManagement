@@ -47,6 +47,9 @@
       display: grid;
       grid-column-gap: 4rem;
       grid-auto-flow: column;
+      
+      grid-template-columns: [image-start] 15rem [image-end] 1fr;
+      grid-template-rows: 10rem;
     }
   }
 
@@ -115,6 +118,10 @@
     margin-bottom: 1rem;
     
     img {
+      grid-column: image-start/image-end;
+      
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
     
