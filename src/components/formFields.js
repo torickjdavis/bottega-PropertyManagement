@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export class FormInput extends Component {
 	render() {
-		const { className, title, input, type, placeholder, editValue } = this.props;
+		const { className, title, input, type, placeholder } = this.props;
 		return (
 			<div className={`form-input ${className || ''}`}>
 				<label className='form-input-title'>{title}</label>
@@ -10,7 +10,6 @@ export class FormInput extends Component {
 					type={type}
 					placeholder={placeholder}
 					{...input}
-					value={editValue ? editValue : input.value}
 				/>
 			</div>
 		);
@@ -19,14 +18,13 @@ export class FormInput extends Component {
 
 export class FormTextArea extends Component {
 	render() {
-		const { className, title, input, placeholder, editValue } = this.props;
+		const { className, title, input, placeholder } = this.props;
 		return (
 			<div className={`form-textarea ${className || ''}`}>
 				<label className='form-textarea-title'>{title}</label>
 				<textarea
 					placeholder={placeholder}
 					{...input}
-					value={editValue ? editValue : input.value}
 				></textarea>
 			</div>
 		);
@@ -71,13 +69,13 @@ export class FormImage extends Component {
 	}
 	
 	render() {
-		const { className, title, input, imageUrl } = this.props;
+		const { className, title, input } = this.props;
 		return (
 			<div className={`form-image ${className || ''}`}>
 				<label className='form-image-title'>{title}</label>
 				<img
 					id='form-image-img'
-					src={imageUrl}
+					// src={imageUrl}
 				/>
 				<input
 					className='form-image-replace'
