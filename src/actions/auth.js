@@ -7,7 +7,12 @@ import {
 } from './types';
 
 export function signUp(fields, success) {
-  //console.log(fields);
+  // let newFields = {
+  //   ...fields,
+  //   admin: true
+  // };
+  
+  // console.log(newFields);
   return function(dispatch) {
     axios.post(`${ROOT_URL}/signup`, fields) // may have to change
     .then(response => {
